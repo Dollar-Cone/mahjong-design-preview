@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Classes — The Mahjong Studio</title>
-  <link rel="stylesheet" href="./_shared.css" />
+  <link rel="stylesheet" href="./_shared.css?v=3" />
 </head>
 <body>
   <header class="site-nav">
@@ -104,6 +104,67 @@
         </p>
       </div>
 
+      <div class="calendar" role="group" aria-label="June 2026 classes at The Mahjong Studio">
+        <header>
+          <span class="month">June 2026</span>
+          <span class="cal-nav">
+            <a href="#" aria-label="Previous month">&larr;</a>
+            <span class="today">Today</span>
+            <a href="#" aria-label="Next month">&rarr;</a>
+          </span>
+        </header>
+        <div class="dow" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="grid">
+          <div class="day muted"><span class="date">31</span></div>
+          <div class="day"><span class="date">1</span></div>
+          <div class="day"><span class="date">2</span><span class="chip class">Mahjong 101 &middot; 10 AM</span></div>
+          <div class="day"><span class="date">3</span><span class="chip class">Mahjong 101 &middot; 6:30 PM</span></div>
+          <div class="day"><span class="date">4</span></div>
+          <div class="day"><span class="date">5</span><span class="chip class">Scoring &amp; strategy &middot; 10 AM</span></div>
+          <div class="day"><span class="date">6</span></div>
+
+          <div class="day"><span class="date">7</span></div>
+          <div class="day"><span class="date">8</span></div>
+          <div class="day today"><span class="date">9</span><span class="chip class">Mahjong 101 &middot; 10 AM</span></div>
+          <div class="day"><span class="date">10</span><span class="chip class">Mahjong 101 &middot; 6:30 PM</span></div>
+          <div class="day"><span class="date">11</span></div>
+          <div class="day"><span class="date">12</span><span class="chip class">Scoring &amp; strategy &middot; 10 AM</span></div>
+          <div class="day"><span class="date">13</span><span class="chip class">Refresher &middot; 1 PM</span></div>
+
+          <div class="day"><span class="date">14</span></div>
+          <div class="day"><span class="date">15</span></div>
+          <div class="day"><span class="date">16</span><span class="chip class">Mahjong 101 &middot; 10 AM</span></div>
+          <div class="day"><span class="date">17</span><span class="chip class">Mahjong 101 &middot; 6:30 PM</span></div>
+          <div class="day"><span class="date">18</span></div>
+          <div class="day"><span class="date">19</span><span class="chip class">Scoring &amp; strategy &middot; 10 AM</span></div>
+          <div class="day"><span class="date">20</span></div>
+
+          <div class="day"><span class="date">21</span></div>
+          <div class="day"><span class="date">22</span></div>
+          <div class="day"><span class="date">23</span><span class="chip class">Mahjong 101 &middot; 10 AM</span></div>
+          <div class="day"><span class="date">24</span><span class="chip class">Mahjong 101 &middot; 6:30 PM</span></div>
+          <div class="day"><span class="date">25</span></div>
+          <div class="day"><span class="date">26</span><span class="chip class">Scoring &amp; strategy &middot; 10 AM</span></div>
+          <div class="day"><span class="date">27</span><span class="chip class">Refresher &middot; 1 PM</span></div>
+
+          <div class="day"><span class="date">28</span></div>
+          <div class="day"><span class="date">29</span></div>
+          <div class="day"><span class="date">30</span><span class="chip class">Mahjong 101 &middot; 10 AM</span></div>
+          <div class="day muted"><span class="date">1</span></div>
+          <div class="day muted"><span class="date">2</span></div>
+          <div class="day muted"><span class="date">3</span></div>
+          <div class="day muted"><span class="date">4</span></div>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--blush-soft); border-left-color:#c2718a;"></span> Class day</span>
+          <span class="legend-item" style="color: var(--ink-faint);">Tap a date to see class details</span>
+        </div>
+      </div>
+
+      <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 400; margin: 0 0 1.4rem; color: var(--ink);">This week's classes in detail</h3>
+
       <div class="stack">
         <a class="row-item" href="#">
           <span class="when">
@@ -113,6 +174,7 @@
           <span class="body">
             <h4>Mahjong 101 — Absolute beginners</h4>
             <span class="meta">2 hours · 8 seats · with Ellen</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Beginner</span>
         </a>
@@ -124,6 +186,7 @@
           <span class="body">
             <h4>Mahjong 101 — Evening session</h4>
             <span class="meta">2 hours · 8 seats · with Marcus</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Beginner</span>
         </a>
@@ -135,6 +198,7 @@
           <span class="body">
             <h4>Scoring and strategy</h4>
             <span class="meta">2.5 hours · 6 seats · prior class recommended</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Level two</span>
         </a>
@@ -146,6 +210,7 @@
           <span class="body">
             <h4>Coming back to the table — refresher</h4>
             <span class="meta">2 hours · 8 seats · for players returning after time away</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Refresher</span>
         </a>
@@ -157,6 +222,7 @@
           <span class="body">
             <h4>Mahjong 101 — Absolute beginners</h4>
             <span class="meta">2 hours · 8 seats · with Ellen</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Beginner</span>
         </a>
@@ -187,6 +253,7 @@
       </div>
       <div>
         <h4>Visit</h4>
+        <a href="./about.html">About the studio</a>
         <a href="./classes.html">Classes</a>
         <a href="./sessions.html">Open play</a>
         <a href="./membership.html">Membership</a>
@@ -212,5 +279,14 @@
       <span>Design preview · v1</span>
     </div>
   </footer>
+
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie preferences">
+    <p>We use cookies for analytics and to remember your preferences. See our <a href="#">privacy notice</a> for details.</p>
+    <div class="actions">
+      <button type="button" onclick="document.getElementById('cookie-banner').setAttribute('hidden','true'); try{localStorage.setItem('cookies','rejected');}catch(e){}">Reject</button>
+      <button type="button" class="primary" onclick="document.getElementById('cookie-banner').setAttribute('hidden','true'); try{localStorage.setItem('cookies','accepted');}catch(e){}">Accept</button>
+    </div>
+  </div>
+  <script>try{if(localStorage.getItem('cookies'))document.getElementById('cookie-banner').setAttribute('hidden','true');}catch(e){}</script>
 </body>
 </html>

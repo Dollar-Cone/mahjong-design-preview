@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Open play — The Mahjong Studio</title>
-  <link rel="stylesheet" href="./_shared.css" />
+  <link rel="stylesheet" href="./_shared.css?v=3" />
 </head>
 <body>
   <header class="site-nav">
@@ -72,6 +72,15 @@
           Browse what's coming up. Drop-ins are welcome; if you want a guaranteed seat,
           reserve ahead. Members never need to reserve for member-only nights.
         </p>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter sessions">
+        <button class="filter-chip active" type="button">All</button>
+        <button class="filter-chip" type="button"><span class="dot open" aria-hidden="true"></span>Open play</button>
+        <button class="filter-chip" type="button"><span class="dot member" aria-hidden="true"></span>Member</button>
+        <button class="filter-chip" type="button"><span class="dot class" aria-hidden="true"></span>Class</button>
+        <button class="filter-chip" type="button"><span class="dot event" aria-hidden="true"></span>Event</button>
+        <button class="filter-chip new-players" type="button">For new players</button>
       </div>
 
       <div class="calendar" role="group" aria-label="June 2026 sessions at The Mahjong Studio">
@@ -153,6 +162,7 @@
           <span class="body">
             <h4>Afternoon open play</h4>
             <span class="meta">3 hours · drop in any time · 16 tables · tea provided</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Open to all</span>
         </a>
@@ -164,6 +174,7 @@
           <span class="body">
             <h4>Assisted morning play</h4>
             <span class="meta">2.5 hours · a teacher is in the room · good for new players</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Beginner-friendly</span>
         </a>
@@ -175,6 +186,7 @@
           <span class="body">
             <h4>Evening open play</h4>
             <span class="meta">3 hours · drop in any time · light supper available</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Open to all</span>
         </a>
@@ -186,6 +198,7 @@
           <span class="body">
             <h4>Member night</h4>
             <span class="meta">3 hours · members only · 8 tables · refreshments served</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Members</span>
         </a>
@@ -197,6 +210,7 @@
           <span class="body">
             <h4>Saturday social</h4>
             <span class="meta">4 hours · drop in any time · light brunch · bring a friend</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Open to all</span>
         </a>
@@ -208,6 +222,7 @@
           <span class="body">
             <h4>Saturday tournament</h4>
             <span class="meta">3 rounds · prizes · sign up by Thursday</span>
+            <a class="add-cal" href="#" aria-label="Add to your calendar">Add to your calendar</a>
           </span>
           <span class="tag">Event</span>
         </a>
@@ -252,6 +267,7 @@
       </div>
       <div>
         <h4>Visit</h4>
+        <a href="./about.html">About the studio</a>
         <a href="./classes.html">Classes</a>
         <a href="./sessions.html">Open play</a>
         <a href="./membership.html">Membership</a>
@@ -277,5 +293,14 @@
       <span>Design preview · v1</span>
     </div>
   </footer>
+
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie preferences">
+    <p>We use cookies for analytics and to remember your preferences. See our <a href="#">privacy notice</a> for details.</p>
+    <div class="actions">
+      <button type="button" onclick="document.getElementById('cookie-banner').setAttribute('hidden','true'); try{localStorage.setItem('cookies','rejected');}catch(e){}">Reject</button>
+      <button type="button" class="primary" onclick="document.getElementById('cookie-banner').setAttribute('hidden','true'); try{localStorage.setItem('cookies','accepted');}catch(e){}">Accept</button>
+    </div>
+  </div>
+  <script>try{if(localStorage.getItem('cookies'))document.getElementById('cookie-banner').setAttribute('hidden','true');}catch(e){}</script>
 </body>
 </html>

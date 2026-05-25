@@ -693,6 +693,247 @@ h1, h2, h3, h4 {
 
 .tier.feature { background: var(--paper-soft); }
 
+/* "Right now at the studio" strip — homepage hero footer */
+.rightnow {
+  background: var(--blue);
+  color: var(--paper);
+  padding: 0.95rem 1.75rem;
+}
+
+.rightnow .shell-wide {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.rightnow .pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: var(--gold-soft);
+}
+
+.rightnow .pulse-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+  animation: pulse 2.2s ease-out infinite;
+}
+
+@keyframes pulse {
+  70%  { box-shadow: 0 0 0 0.55rem rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.rightnow .now-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  flex: 1;
+  min-width: 0;
+}
+
+.rightnow .now-text .sep { color: var(--gold-soft); margin: 0 0.55rem; }
+
+.rightnow a {
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 0.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.rightnow a:hover { color: var(--gold-soft); }
+
+/* Filter chips — sessions and classes */
+.filter-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--rule-strong);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+  cursor: pointer;
+}
+
+.filter-chip .dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.filter-chip.active,
+.filter-chip:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.filter-chip .dot.open    { background: var(--blue); }
+.filter-chip .dot.member  { background: var(--gold); }
+.filter-chip .dot.class   { background: #c2718a; }
+.filter-chip .dot.event   { background: #8a7430; }
+
+.filter-chip.new-players {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.filter-chip.new-players:hover,
+.filter-chip.new-players.active {
+  background: var(--blue);
+  color: var(--paper);
+}
+
+/* "Add to calendar" inline link on rows */
+.add-cal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  color: var(--blue);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-top: 0.4rem;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.row-item:hover .add-cal,
+.row-item:focus-within .add-cal { opacity: 1; }
+
+.add-cal::before {
+  content: "⊞";
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+
+.add-cal:hover { color: var(--blue-deep); }
+
+/* Cookie banner — bottom-fixed, dismissible */
+.cookie-banner {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  max-width: 38rem;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 12px 36px rgba(34, 34, 34, 0.18);
+  padding: 1.1rem 1.3rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+}
+
+.cookie-banner[hidden] { display: none; }
+
+.cookie-banner p {
+  margin: 0;
+  color: var(--ink-soft);
+  flex: 1;
+  min-width: 14rem;
+  line-height: 1.45;
+}
+
+.cookie-banner p a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+
+.cookie-banner .actions {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.cookie-banner button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.55rem 0.9rem;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.cookie-banner button:hover { background: var(--ink); color: var(--paper); }
+
+.cookie-banner button.primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cookie-banner button.primary:hover { background: var(--blue); border-color: var(--blue); }
+
+/* About-page first-visit walkthrough */
+.walkthrough {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.walkthrough .step {
+  padding: 2rem 1.6rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.walkthrough .step:last-child { border-right: 0; }
+
+.walkthrough .step-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.walkthrough .step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.walkthrough .step p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 /* Calendar (sessions page month view) */
 .calendar {
   border: 1px solid var(--rule);

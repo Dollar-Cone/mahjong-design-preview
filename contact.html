@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — The Mahjong Studio</title>
-  <link rel="stylesheet" href="./_shared.css" />
+  <link rel="stylesheet" href="./_shared.css?v=3" />
 </head>
 <body>
   <header class="site-nav">
@@ -147,6 +147,7 @@
       </div>
       <div>
         <h4>Visit</h4>
+        <a href="./about.html">About the studio</a>
         <a href="./classes.html">Classes</a>
         <a href="./sessions.html">Open play</a>
         <a href="./membership.html">Membership</a>
@@ -172,5 +173,14 @@
       <span>Design preview · v1</span>
     </div>
   </footer>
+
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie preferences">
+    <p>We use cookies for analytics and to remember your preferences. See our <a href="#">privacy notice</a> for details.</p>
+    <div class="actions">
+      <button type="button" onclick="document.getElementById('cookie-banner').setAttribute('hidden','true'); try{localStorage.setItem('cookies','rejected');}catch(e){}">Reject</button>
+      <button type="button" class="primary" onclick="document.getElementById('cookie-banner').setAttribute('hidden','true'); try{localStorage.setItem('cookies','accepted');}catch(e){}">Accept</button>
+    </div>
+  </div>
+  <script>try{if(localStorage.getItem('cookies'))document.getElementById('cookie-banner').setAttribute('hidden','true');}catch(e){}</script>
 </body>
 </html>
