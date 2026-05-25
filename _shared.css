@@ -1,22 +1,33 @@
 /* Design preview for The Mahjong Studio public surface
    Throwaway HTML — open any *.html file in a browser to review.
-   Direction: warm editorial hospitality, type-led, generous space. */
+   Direction: Pam's approved brand kit (Canva asset brief) — Playfair Display
+   headings + Montserrat body + cream/blush/dusty-blue/charcoal/gold tokens.
+   Generous whitespace, photography-forward, gold as accent only. */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Albert+Sans:wght@300;400;500;600&family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
 
 :root {
-  --paper:        #fbf6ed;
-  --paper-soft:   #f4ecdd;
-  --ink:          #1a1f2e;
-  --ink-soft:     #4a4f5e;
-  --ink-faint:    #8a8c95;
-  --rule:         rgba(26, 31, 46, 0.12);
-  --rule-strong:  rgba(26, 31, 46, 0.32);
-  --coral:        #c25656;
-  --gold:         #b18432;
-  --gold-soft:    #d9b87a;
-  --moss:         #6b7a5a;
-  --linen:        #efe5d2;
+  /* Brand tokens — from THE MAHJONG STUDIO Canva brief */
+  --cream:        #F7F4EF;
+  --cream-soft:   #ede8df;
+  --blush:        #F6D6DC;
+  --blush-soft:   #fbeef1;
+  --blue:         #4B6B8C;
+  --blue-deep:    #364d66;
+  --blue-soft:    #e1e8f0;
+  --charcoal:     #222222;
+  --gold:         #D4AF37;
+  --gold-soft:    #e7cd76;
+
+  /* Derived */
+  --paper:        var(--cream);
+  --paper-soft:   var(--blush-soft);
+  --ink:          var(--charcoal);
+  --ink-soft:     #4a4a4a;
+  --ink-faint:    #888888;
+  --rule:         rgba(34, 34, 34, 0.12);
+  --rule-strong:  rgba(34, 34, 34, 0.32);
+  --linen:        #ede1ce;
   --max:          76rem;
 }
 
@@ -27,7 +38,7 @@ html { font-size: 17px; }
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Albert Sans', system-ui, sans-serif;
+  font-family: 'Montserrat', system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: 0.005em;
@@ -50,19 +61,17 @@ body::before {
 main, header, footer, nav { position: relative; z-index: 2; }
 
 /* Type system */
-.serif  { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'opsz' 144, 'SOFT' 50; }
-.script { font-family: 'Caveat', cursive; }
+.script { font-family: 'Great Vibes', cursive; }
 
 h1, h2, h3, h4 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 380;
   letter-spacing: -0.012em;
   line-height: 1.04;
 }
 
 .eyebrow {
-  font-family: 'Albert Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -71,8 +80,8 @@ h1, h2, h3, h4 {
 }
 
 .eyebrow.gold { color: var(--gold); }
-.eyebrow.coral { color: var(--coral); }
-.eyebrow.moss { color: var(--moss); }
+.eyebrow.coral { color: var(--blue); }
+.eyebrow.moss { color: var(--blue); }
 
 /* Layout */
 .shell {
@@ -122,11 +131,10 @@ h1, h2, h3, h4 {
 }
 
 .brandmark .name {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 460;
   letter-spacing: 0.01em;
-  font-variation-settings: 'opsz' 24, 'SOFT' 30;
 }
 
 .brandmark .loc {
@@ -222,7 +230,7 @@ h1, h2, h3, h4 {
 
 .page-hero .script {
   font-size: 2.1rem;
-  color: var(--coral);
+  color: var(--blue);
   line-height: 1;
   margin: 0.4rem 0 1.2rem;
   display: inline-block;
@@ -243,8 +251,7 @@ h1, h2, h3, h4 {
 }
 
 .page-hero .actions a {
-  font-family: 'Fraunces', Georgia, serif;
-  font-variation-settings: 'opsz' 24, 'SOFT' 50;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.3rem;
   font-weight: 380;
   letter-spacing: -0.005em;
@@ -259,8 +266,8 @@ h1, h2, h3, h4 {
 }
 
 .page-hero .actions a:hover {
-  color: var(--coral);
-  border-bottom-color: var(--coral);
+  color: var(--blue);
+  border-bottom-color: var(--blue);
 }
 
 .page-hero .actions a .arrow { color: var(--gold); font-size: 1.2rem; }
@@ -272,7 +279,7 @@ h1, h2, h3, h4 {
 }
 
 .ask a {
-  color: var(--coral);
+  color: var(--blue);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -304,27 +311,29 @@ h1, h2, h3, h4 {
   max-width: 22rem;
 }
 
-/* Feature grid — 4 typographic blocks, not boxes */
+/* Feature grid — typographic blocks, not boxes; supports 4–5 cards */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: 0;
+  border-top: 1px solid var(--rule);
 }
 
 .feature {
-  padding: 1.6rem 1.5rem 1.6rem 0;
+  padding: 1.8rem 1.5rem 1.8rem 1.5rem;
   border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   text-decoration: none;
   color: var(--ink);
   display: block;
   position: relative;
+  background: var(--paper);
 }
 
 .feature:last-child { border-right: 0; }
 
 .feature .num {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 24;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 0.72rem;
   color: var(--gold);
   letter-spacing: 0.14em;
@@ -344,13 +353,13 @@ h1, h2, h3, h4 {
 
 .feature .more {
   font-size: 0.82rem;
-  color: var(--coral);
+  color: var(--blue);
   margin-top: 0.9rem;
   display: inline-block;
   border-bottom: 1px solid transparent;
 }
 
-.feature:hover .more { border-bottom-color: var(--coral); }
+.feature:hover .more { border-bottom-color: var(--blue); }
 
 /* Studio block */
 .studio-card {
@@ -410,7 +419,7 @@ h1, h2, h3, h4 {
 }
 
 .site-foot h4 {
-  font-family: 'Albert Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -431,7 +440,7 @@ h1, h2, h3, h4 {
 .site-foot a:hover { opacity: 1; }
 
 .site-foot .tagline {
-  font-family: 'Caveat', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.65rem;
   color: var(--gold-soft);
   display: block;
@@ -463,8 +472,7 @@ h1, h2, h3, h4 {
 }
 
 .row-item .when {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 24;
+  font-family: 'Playfair Display', Georgia, serif;
   color: var(--ink);
 }
 
@@ -503,7 +511,7 @@ h1, h2, h3, h4 {
   border-radius: 999px;
 }
 
-.row-item:hover .body h4 { color: var(--coral); }
+.row-item:hover .body h4 { color: var(--blue); }
 
 /* Help: questions */
 .q-list {
@@ -525,8 +533,7 @@ h1, h2, h3, h4 {
 .q-list a:nth-child(even) { padding-left: 2.5rem; }
 
 .q-list .q {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 36, 'SOFT' 50;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.4rem;
   font-weight: 380;
   letter-spacing: -0.005em;
@@ -538,7 +545,7 @@ h1, h2, h3, h4 {
 
 .q-list .q .arrow { color: var(--gold); }
 .q-list .a { color: var(--ink-soft); font-size: 0.92rem; max-width: 28rem; }
-.q-list a:hover .q { color: var(--coral); }
+.q-list a:hover .q { color: var(--blue); }
 
 /* Contact */
 .contact-grid {
@@ -574,15 +581,14 @@ h1, h2, h3, h4 {
 }
 
 .contact-card dd .big {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 36, 'SOFT' 50;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.45rem;
   font-weight: 380;
   color: var(--ink);
 }
 
 .contact-card dd a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 0.1rem; }
-.contact-card dd a:hover { color: var(--coral); border-bottom-color: var(--coral); }
+.contact-card dd a:hover { color: var(--blue); border-bottom-color: var(--blue); }
 .contact-card dd small { display: block; color: var(--ink-soft); font-size: 0.85rem; margin-top: 0.35rem; }
 
 .contact-form {
@@ -627,15 +633,14 @@ h1, h2, h3, h4 {
   background: var(--ink);
   color: var(--paper);
   padding: 0.85rem 1.4rem;
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 24, 'SOFT' 30;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.05rem;
   cursor: pointer;
   letter-spacing: 0.005em;
   margin-top: 0.6rem;
 }
 
-.contact-form button:hover { background: var(--coral); }
+.contact-form button:hover { background: var(--blue); }
 
 /* Membership tiers */
 .tier-grid {
@@ -654,8 +659,7 @@ h1, h2, h3, h4 {
 .tier:nth-child(even) { border-right: 0; }
 
 .tier .price {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 144, 'SOFT' 40;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 3.2rem;
   font-weight: 380;
   line-height: 1;
@@ -665,9 +669,8 @@ h1, h2, h3, h4 {
 
 .tier .price small {
   font-size: 0.9rem;
-  font-family: 'Albert Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--ink-soft);
-  font-variation-settings: normal;
   letter-spacing: 0.02em;
 }
 
@@ -679,12 +682,12 @@ h1, h2, h3, h4 {
 .tier .join {
   display: inline-block;
   margin-top: 1.4rem;
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 380;
-  color: var(--coral);
+  color: var(--blue);
   text-decoration: none;
-  border-bottom: 1px solid var(--coral);
+  border-bottom: 1px solid var(--blue);
   padding-bottom: 0.15rem;
 }
 
@@ -698,8 +701,7 @@ h1, h2, h3, h4 {
 }
 
 .pull blockquote {
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 144, 'SOFT' 70;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 380;
   line-height: 1.25;
@@ -750,7 +752,7 @@ h1, h2, h3, h4 {
 .cover-grid a:nth-child(3n) { border-right: 0; }
 
 .cover-grid .num {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 0.72rem;
   color: var(--gold);
   letter-spacing: 0.14em;
@@ -758,7 +760,7 @@ h1, h2, h3, h4 {
 
 .cover-grid h3 { font-size: 1.6rem; font-weight: 380; margin: 0.4rem 0 0.4rem; }
 .cover-grid p { font-size: 0.9rem; color: var(--ink-soft); }
-.cover-grid a:hover h3 { color: var(--coral); }
+.cover-grid a:hover h3 { color: var(--blue); }
 
 /* Responsive */
 @media (max-width: 880px) {
