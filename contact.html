@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — The Mahjong Studio</title>
+  <link rel="stylesheet" href="./_shared.css" />
+</head>
+<body>
+  <header class="site-nav">
+    <div class="shell row">
+      <a class="brandmark" href="./index.html">
+        <span class="tiles">
+          <img src="./assets/mahjong-logo-tile-flower.png" alt="" />
+          <img src="./assets/mahjong-logo-tile-sparrow.png" alt="" />
+          <img src="./assets/mahjong-logo-tile-peacock.png" alt="" />
+        </span>
+        <span>
+          <span class="name">The Mahjong Studio</span>
+          <span class="loc">Mineral Springs, NC</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="primary-nav">
+          <li><a href="./classes.html">Learn</a></li>
+          <li><a href="./sessions.html">Play</a></li>
+          <li><a href="./membership.html">Membership</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="utility-nav">
+        <li><a href="./help.html">Help</a></li>
+        <li><a class="member" href="#">Member sign in</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero shell-wide" aria-labelledby="contact-title">
+      <div class="copy">
+        <span class="eyebrow gold">Contact</span>
+        <h1 id="contact-title">We'd love to hear from you.</h1>
+        <p class="sub" style="margin-top: 1.6rem;">
+          Stop by, call, email, or send us a note below. We usually reply within a business day —
+          sooner if the studio is open.
+        </p>
+        <p class="ask">
+          Already a member? <a href="#">Sign in →</a> for faster help.
+        </p>
+      </div>
+      <div class="photo">
+        <img src="./assets/mahjong-studio-about-community.jpg" alt="The studio welcome table" />
+      </div>
+    </section>
+
+    <section class="shell-wide">
+      <div class="contact-grid">
+        <div>
+          <h2 style="font-size: clamp(1.7rem, 2.8vw, 2.2rem); margin-bottom: 2rem;">Reach the studio.</h2>
+
+          <dl class="contact-cards">
+            <div class="contact-card">
+              <dt>Visit</dt>
+              <dd>
+                <span class="big">5910 Waxhaw Hwy</span><br />
+                <span class="big">Mineral Springs, NC 28108</span>
+                <small>Free parking out front and on the side lot.</small>
+              </dd>
+            </div>
+            <div class="contact-card">
+              <dt>Hours</dt>
+              <dd>
+                <span class="big">Tue – Sat, 10:00 AM – 8:00 PM</span>
+                <small>Closed Sunday and Monday.</small>
+              </dd>
+            </div>
+            <div class="contact-card">
+              <dt>Call</dt>
+              <dd>
+                <span class="big"><a href="tel:7047022486">704-702-2486</a></span>
+                <small>We pick up during studio hours. Voicemail any time.</small>
+              </dd>
+            </div>
+            <div class="contact-card">
+              <dt>Email</dt>
+              <dd>
+                <span class="big"><a href="mailto:info@themahjongstudionc.com">info@themahjongstudionc.com</a></span>
+                <small>For everything from class questions to private events.</small>
+              </dd>
+            </div>
+            <div class="contact-card">
+              <dt>Private<br/>groups</dt>
+              <dd>
+                <span class="big"><a href="mailto:groups@themahjongstudionc.com">groups@themahjongstudionc.com</a></span>
+                <small>Birthdays, work outings, charity nights, lessons for a group of friends.</small>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a static design preview — no message was sent.');">
+          <h3>Or send us a note.</h3>
+          <p style="color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 1.4rem;">
+            Two or three sentences is plenty. We'll be back in touch the next time we're at the desk.
+          </p>
+
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            <span>Email or phone</span>
+            <input type="text" name="contact" required />
+          </label>
+
+          <label>
+            <span>What can we help with?</span>
+            <select name="topic">
+              <option>Classes for new players</option>
+              <option>Open play — when to come</option>
+              <option>Membership questions</option>
+              <option>A private event or group</option>
+              <option>Something else</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Your note</span>
+            <textarea name="note" placeholder="A few sentences is plenty."></textarea>
+          </label>
+
+          <button type="submit">Send your note →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="shell row">
+      <div>
+        <span class="serif" style="font-size: 1.4rem;">The Mahjong Studio</span>
+        <span class="tagline">Learn. Play. Belong.</span>
+        <p style="font-size: 0.9rem; opacity: 0.75; max-width: 18rem;">5910 Waxhaw Hwy, Mineral Springs, NC 28108</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="./classes.html">Classes</a>
+        <a href="./sessions.html">Open play</a>
+        <a href="./membership.html">Membership</a>
+        <a href="#">Events</a>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <a href="./contact.html">Contact the studio</a>
+        <a href="./help.html">Help</a>
+        <a href="mailto:info@themahjongstudionc.com">info@themahjongstudionc.com</a>
+        <a href="tel:7047022486">704-702-2486</a>
+      </div>
+      <div>
+        <h4>The fine print</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Studio policies</a>
+        <a href="#">Cookie preferences</a>
+      </div>
+    </div>
+    <div class="shell colophon">
+      <span>© 2026 The Mahjong Studio @ Dollar Cone</span>
+      <span>Design preview · v1</span>
+    </div>
+  </footer>
+</body>
+</html>
